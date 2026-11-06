@@ -1,0 +1,17 @@
+[project]
+name = "toolcall-guard-bench"
+version = "0.1.0"
+description = "Benchmark for unexpected tool calls (fabricated names/params) and repetitive tool-call loops in tool-using LLMs"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+tcb = "tcb.cli:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["tcb"]
